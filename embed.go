@@ -1,14 +1,11 @@
 package main
 
-/*
-// Start with the basic example from https://docs.julialang.org/en/release-0.6/manual/embedding/
+// See README.md and <https://docs.julialang.org/en/v1/manual/embedding> on how to modify the paths.
+// NOTE: It is important that there is NO empty line before `import "C"`, see https://golang.org/cmd/cgo.
 //
-// Obviously the paths below may need to be modified to match your julia install location and version number.
-//
-#cgo CFLAGS: -fPIC -DJULIA_INIT_DIR="/Applications/Julia-0.6.app/Contents/Resources/julia/lib" -I/Applications/Julia-0.6.app/Contents/Resources/julia/include/julia -I.
-#cgo LDFLAGS: -L/Applications/Julia-0.6.app/Contents/Resources/julia/lib/julia  -L/Applications/Julia-0.6.app/Contents/Resources/julia/lib -Wl,-rpath,/Applications/Julia-0.6.app/Contents/Resources/julia/lib -ljulia
-#include <julia.h>
-*/
+// #cgo CFLAGS: -fPIC -DJULIA_INIT_DIR="/Applications/Julia-0.6.app/Contents/Resources/julia/lib" -I/Applications/Julia-0.6.app/Contents/Resources/julia/include/julia -I.
+// #cgo LDFLAGS: -L/Applications/Julia-0.6.app/Contents/Resources/julia/lib/julia  -L/Applications/Julia-0.6.app/Contents/Resources/julia/lib -Wl,-rpath,/Applications/Julia-0.6.app/Contents/Resources/julia/lib -ljulia
+// #include <julia.h>
 import "C"
 
 func main() {
